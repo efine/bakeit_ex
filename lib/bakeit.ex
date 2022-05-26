@@ -40,7 +40,7 @@ defmodule Bakeit do
   end
 
   defp launch_webbrowser(<<url :: binary>>) do
-    url |> String.to_char_list |> launch_webbrowser
+    url |> String.to_charlist |> launch_webbrowser
   end
   defp launch_webbrowser(url) do
     case :webbrowser.open(url) do
